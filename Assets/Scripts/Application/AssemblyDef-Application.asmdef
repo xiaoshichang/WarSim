@@ -1,0 +1,19 @@
+{
+    "name": "AssemblyDef-Application",
+    "rootNamespace": "",
+    "references": [
+        "GUID:98f35fc7c44ae4c4c8f470a817aea3d6",
+        "GUID:68ba3e94d36c2544e8ac4ffbafab71cc",
+        "GUID:034619d5f1d00df40b855c02fd1067e8",
+        "GUID:d69179e5c1fc10b4caedad2270b39979"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

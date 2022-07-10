@@ -1,0 +1,16 @@
+{
+    "name": "AssemblyDef-GameplayCore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:98f35fc7c44ae4c4c8f470a817aea3d6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

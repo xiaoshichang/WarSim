@@ -2,17 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Application : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+namespace WarSim
+{
+    public class Application : MonoBehaviour
     {
+        void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+            ApplicationGlobals.CurrentApplication = this;
+            
+            _InitAllManagers();
+            _StartNextGamePhase();
+        }
+
+        void Update()
+        {
+            var dt = Time.deltaTime;
+            _GamePhaseManager.Tick(dt);
+            
+        }
+
+        private void OnDestroy()
+        {
+            _ReleaseAllManagers();
+            ApplicationGlobals.CurrentApplication = null;
+        }
+
+        private void _InitAllManagers()
+        {
+            _GamePhaseManager.Init();
+        }
         
+
+        private void _ReleaseAllManagers()
+        {
+            _GamePhaseManager.Release();
+        }
+        
+        private void _StartNextGamePhase()
+        {
+            _GamePhaseManager.EnterGamePhaseAssetLoad();
+        }
+
+        private readonly GamePhaseManager _GamePhaseManager = new();
+
     }
 }
